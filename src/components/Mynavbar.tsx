@@ -24,10 +24,11 @@ export default function Mynavbar() {
             <span className="sr-only">MaisonQ Studio</span>
             <Image 
               src={logo} 
-              alt="MaisonQ Studio" 
+              alt="MaisonQ Studio"
               className='h-12 w-auto' 
               priority 
               quality={90}
+              loading="eager"
             />
           </Link>
         </div>
