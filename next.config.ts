@@ -1,7 +1,13 @@
 import type { NextConfig } from "next";
 
+const isGithubActions = process.env.GITHUB_ACTIONS || false;
+const repo = process.env.GITHUB_REPOSITORY?.replace(/.*?\//, '') || '';
+
 const nextConfig: NextConfig = {
   output: 'export',  // Enable static exports
+  // Configure base path for GitHub Pages
+  basePath: isGithubActions ? `/${repo}` : '',
+  assetPrefix: isGithubActions ? `/${repo}/` : '',
   images: {
     unoptimized: true, // Required for static export
     formats: ['image/webp', 'image/avif'],

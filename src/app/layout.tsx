@@ -19,9 +19,11 @@ export const metadata = {
   metadataBase: new URL('https://maisonq.studio'),
   icons: {
     icon: [
-      { url: '/favicon.ico', sizes: 'any' },
-      { url: '/favicon.png', type: 'image/png' }
+      { url: './favicon.ico', sizes: 'any' },
+      { url: './favicon.png', type: 'image/png' }
     ],
+    shortcut: './favicon.png',
+    apple: './favicon.png',
   },
   openGraph: {
     title: 'MaisonQ Studio',
