@@ -22,7 +22,13 @@ export default function Mynavbar() {
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">MaisonQ Studio</span>
-            <Image src={logo} alt="MaisonQ Studio" className='h-12 w-auto' />
+            <Image 
+              src={logo} 
+              alt="MaisonQ Studio" 
+              className='h-12 w-auto' 
+              priority 
+              quality={90}
+            />
           </Link>
         </div>
         <div className="flex lg:hidden">
