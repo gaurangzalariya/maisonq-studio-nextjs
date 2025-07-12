@@ -4,9 +4,6 @@ import TextSection from '@/components/TextSection'
 export const metadata = {
   title: 'MaisonQ Studio | Your Strategic Shopify & WordPress Partner',
   description: 'MaisonQ Studio is a European-style web design and development agency based in India, specializing in custom Shopify and WordPress solutions built for long-term growth.',
-  icons: {
-    icon: '/favicon.png',
-  },
   openGraph: {
     title: 'MaisonQ Studio',
     description: 'European-style Shopify & WordPress development agency, based in India. Focused on partnerships, not just projects.',

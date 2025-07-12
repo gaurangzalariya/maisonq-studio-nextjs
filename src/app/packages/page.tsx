@@ -4,9 +4,6 @@ import FAQSection from '@/components/PackageFAQSection'
 export const metadata = {
   title: 'Flexible Hour-Based Pricing | MaisonQ Studio',
   description: 'Buy flexible hourly packages (5–40 hours) for Shopify & WordPress development. No retainers. Transparent reports. High-quality results.',
-  icons: {
-    icon: '/favicon.png',
-  },
   openGraph: {
     title: 'Our Packages – MaisonQ Studio',
     description: 'Pay-as-you-go development model with transparent tracking and flexibility. Perfect for growing brands.',

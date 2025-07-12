@@ -10,7 +10,10 @@ export const metadata = {
   description: 'MaisonQ Studio - Interior Design & Architecture',
   metadataBase: new URL('https://maisonq.studio'),
   icons: {
-    icon: '/favicon.png',
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon.png', type: 'image/png' }
+    ],
   },
   openGraph: {
     title: 'MaisonQ Studio',

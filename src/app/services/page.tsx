@@ -5,9 +5,6 @@ import ServiceFAQSection from '@/components/ServiceFAQSection'
 export const metadata = {
   title: 'Our Services | Shopify & WordPress Experts – MaisonQ Studio',
   description: 'Explore our high-quality Shopify Plus development, fast & scalable WordPress solutions, and collaborative design partnerships.',
-  icons: {
-    icon: '/favicon.png',
-  },
   openGraph: {
     title: 'Services – MaisonQ Studio',
     description: 'Custom Shopify themes, performance-optimized WordPress development, and design partnerships built for growth.',

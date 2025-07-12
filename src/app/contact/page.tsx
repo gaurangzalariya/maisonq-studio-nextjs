@@ -4,9 +4,6 @@ import CalendlyEmbed from '@/components/CalendlyEmbed';
 export const metadata = {
   title: 'Let’s Connect | Book a Call with MaisonQ Studio',
   description: 'Book a 30-minute discovery call to explore how we can support your brand with strategic Shopify & WordPress solutions.',
-  icons: {
-    icon: '/favicon.png',
-  },
   openGraph: {
     title: 'Contact MaisonQ Studio',
     description: 'Start a conversation with our team and see how we partner with brands to build great digital experiences.',
