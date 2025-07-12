@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
+import Link from 'next/link'
 import logo from '../../public/logo.png'
 
 const navigation = [
@@ -19,10 +20,10 @@ export default function Mynavbar() {
     <>
       <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
-          <a href="/" className="-m-1.5 p-1.5">
+          <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">MaisonQ Studio</span>
             <Image src={logo} alt="MaisonQ Studio" className='h-12 w-auto' />
-          </a>
+          </Link>
         </div>
         <div className="flex lg:hidden">
           <button

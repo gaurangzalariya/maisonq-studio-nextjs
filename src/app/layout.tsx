@@ -8,6 +8,7 @@ import GoogleAnalytics from "@/components/GoogleAnalytics";
 export const metadata = {
   title: 'MaisonQ Studio',
   description: 'MaisonQ Studio - Interior Design & Architecture',
+  metadataBase: new URL('https://maisonq.studio'),
   icons: {
     icon: '/favicon.png',
   },

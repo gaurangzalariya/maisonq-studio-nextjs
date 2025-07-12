@@ -1,7 +1,6 @@
 import PageHero from '@/components/PageHero'
 import FAQSection from '@/components/PackageFAQSection'
 
-import {Metadata} from "next";
 export const metadata = {
   title: 'Flexible Hour-Based Pricing | MaisonQ Studio',
   description: 'Buy flexible hourly packages (5–40 hours) for Shopify & WordPress development. No retainers. Transparent reports. High-quality results.',
@@ -61,7 +60,7 @@ export default function Packages() {
         </ul>
 
         <p className="text-lg mt-8">
-          We'll work based on your requests, provide regular updates, and deliver high-quality work at your pace.
+          We&apos;ll work based on your requests, provide regular updates, and deliver high-quality work at your pace.
         </p>
       </section>
       <FAQSection />

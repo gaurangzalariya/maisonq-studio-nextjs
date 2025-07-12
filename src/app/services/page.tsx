@@ -2,7 +2,6 @@ import PageHero from '@/components/PageHero'
 import TextSection from '@/components/TextSection'
 import ServiceFAQSection from '@/components/ServiceFAQSection'
 
-import {Metadata} from "next";
 export const metadata = {
   title: 'Our Services | Shopify & WordPress Experts – MaisonQ Studio',
   description: 'Explore our high-quality Shopify Plus development, fast & scalable WordPress solutions, and collaborative design partnerships.',

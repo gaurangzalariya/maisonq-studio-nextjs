@@ -1,7 +1,6 @@
 import PageHero from '@/components/PageHero'
 import TextSection from '@/components/TextSection'
 
-import {Metadata} from "next";
 export const metadata = {
   title: 'MaisonQ Studio | Your Strategic Shopify & WordPress Partner',
   description: 'MaisonQ Studio is a European-style web design and development agency based in India, specializing in custom Shopify and WordPress solutions built for long-term growth.',
