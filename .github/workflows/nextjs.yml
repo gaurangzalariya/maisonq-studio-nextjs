@@ -74,8 +74,17 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('package-lock.json', 'yarn.lock') }}-
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
-      - name: Build and Export with Next.js
+      - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
+      # New steps to handle favicon
+      - name: Remove Next.js favicon
+        run: |
+          rm -f ./out/favicon.ico
+          rm -f ./out/next.svg
+      - name: Copy our favicon
+        run: |
+          cp ./public/favicon.ico ./out/
+          cp ./public/favicon.png ./out/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
