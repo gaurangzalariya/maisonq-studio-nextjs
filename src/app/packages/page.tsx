@@ -40,10 +40,10 @@ export default function Packages() {
         }}
       />
       <section className="text-center px-6 py-24 sm:py-32 max-w-5xl mx-auto lg:py-40">
-        <h3 className="text-3xl font-secondary md:text-4xl font-semibold mb-4">
-          Simple, Transparent Pricing
+        <h3 className="text-3xl font-secondary md:text-5xl font-semibold mb-4">
+          Hourly Packages
         </h3>
-
+        
         <p className="text-lg mb-8">
           We work on a flexible hour-based model designed for growing brands.<br />
           Purchase a block of hours (from 5 to 40) and use them over 90 days—no strings, no retainers.
@@ -58,6 +58,27 @@ export default function Packages() {
 
         <p className="text-lg mt-8">
           We&apos;ll work based on your requests, provide regular updates, and deliver high-quality work at your pace.
+        </p>
+
+        <hr className="my-15 border-t border-[#938f8a] opacity-40" />
+
+        <h3 className="text-3xl font-secondary md:text-5xl font-semibold mb-4">
+          Growth-Based Partnership
+        </h3>
+
+        <p className="text-lg mb-8">
+          Prefer to align our success with yours? For select clients, we offer a performance-based model where our compensation is tied to your store&apos;s revenue growth.
+        </p>
+
+        <ul className="list-disc list-inside text-left text-lg space-y-2 max-w-3xl mx-auto">
+          <li>No upfront cost-ideal for high-potential brands</li>
+          <li>We partner deeply, handling CRO, UX, performance & features</li>
+          <li>Compensation based on agreed percentage of monthly sales</li>
+          <li>Best suited for stores with consistent traffic and sales data</li>
+        </ul>
+
+        <p className="text-lg mt-8">
+          Note: This model is available by application only and subject to approval.
         </p>
       </section>
       <FAQSection />

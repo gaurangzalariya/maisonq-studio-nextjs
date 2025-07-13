@@ -5,7 +5,8 @@
 
 @theme {
     --font-primary: "Inter", "sans-serif"; 
-    --font-secondary: "the-seasons", "sans-serif"; 
+    --font-secondary: "the-seasons", "sans-serif";
+    --aspect-retro: 4 / 3;
 }
 
 /* Direct iframe inside Calendly container */

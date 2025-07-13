@@ -1,0 +1,71 @@
+# Cursor Rules - MaisonQ Studio Next.js
+
+## Project Stack
+Next.js 15 + TypeScript + Tailwind CSS + Framer Motion
+
+## Critical Rules to Prevent Linter Errors
+
+### TypeScript/Framer Motion
+- **NEVER put transitions inside variants** - causes type errors
+- Use `as const` for transition types: `type: "spring" as const`
+- Use `"easeOut" as const` for easing, NOT just `"easeOut"`
+- Remove `static` prop from `DialogPanel` - it doesn't exist
+- Apply transitions at component level, not in variant objects
+
+```typescript
+// ✅ CORRECT
+const variants = { hidden: { opacity: 0 }, visible: { opacity: 1 } }
+<motion.div variants={variants} transition={{ duration: 0.6, ease: "easeOut" as const }} />
+
+// ❌ WRONG - causes linter errors
+const variants = { 
+  visible: { opacity: 1, transition: { duration: 0.6, ease: "easeOut" } } 
+}
+```
+
+### Next.js/React
+- Use `<Image>` from `next/image`, NOT `<img>`
+- Use `<Link>` from `next/link` for internal navigation
+- Add `'use client'` for interactive components
+- Always use named exports, avoid default exports
+
+## Mobile-First Essentials
+- Start mobile, scale up: `text-sm sm:text-base md:text-lg`
+- 44px minimum touch targets: `min-h-[44px] min-w-[44px]`
+- Always include `useReducedMotion()` hook
+
+## Animation Patterns
+```typescript
+// Page transitions
+<AnimatePresence mode="wait">
+  <motion.div key={pathname} initial={{ opacity: 0 }} animate={{ opacity: 1 }} />
+</AnimatePresence>
+
+// Mobile navigation
+<motion.div
+  initial={{ x: '100%' }}
+  animate={{ x: 0 }}
+  exit={{ x: '100%' }}
+  transition={{ type: "spring" as const, stiffness: 300, damping: 30 }}
+/>
+
+// Touch feedback
+<motion.button
+  whileTap={{ scale: 0.95 }}
+  style={{ touchAction: 'manipulation' }}
+  className="min-h-[44px]"
+/>
+```
+
+## Before Submitting
+1. Run `npm run build` - fix any build errors
+2. Check for linter warnings in editor
+3. Test mobile navigation animations
+4. Verify reduced motion support
+
+## Key Rules
+1. Mobile-first always
+2. No linter errors allowed
+3. Always test builds
+4. Include accessibility features
+5. Use project animation components 

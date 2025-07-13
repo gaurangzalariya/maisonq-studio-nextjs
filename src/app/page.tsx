@@ -1,5 +1,6 @@
 import PageHero from '@/components/PageHero'
 import TextSection from '@/components/TextSection'
+import AnimatedSection from '@/components/AnimatedSection'
 
 export const metadata = {
   title: 'MaisonQ Studio | Your Strategic Shopify & WordPress Partner',
@@ -39,10 +40,12 @@ export default function Home() {
           primaryCTATextColor: 'text-white'
         }}
       />
-      <TextSection
-        heading="We're not just developers. We're growth partners."
-        subtext="At MaisonQ, we combine European design sensibilities with Indian engineering precision. We don't just build websites—we build relationships. Whether it's a bold Shopify store or a content-rich WordPress platform, we co-create digital experiences that drive lasting value."
-      />
+      <AnimatedSection direction="up" delay={0.2}>
+        <TextSection
+          heading="We're not just developers. We're growth partners."
+          subtext="At MaisonQ, we combine European design sensibilities with Indian engineering precision. We don't just build websites—we build relationships. Whether it's a bold Shopify store or a content-rich WordPress platform, we co-create digital experiences that drive lasting value."
+        />
+      </AnimatedSection>
     </>
   )
 }

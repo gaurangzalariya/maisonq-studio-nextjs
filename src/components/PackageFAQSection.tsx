@@ -7,34 +7,49 @@ const faqs = [
   {
     question: "How does the hour-based package model work?",
     answer:
-      "You can purchase a block of hours—5, 10, 20, or 40—that are valid for 90 days. These hours can be used for any design or development task you need, across Shopify or WordPress. You'll send requests as needed, and our team will deliver the work while tracking the exact time spent. We provide a weekly report so you always know how much time has been used and what's remaining.",
+      "You can purchase a block of hours—5, 10, 20, or 40—that are valid for 90 days. These hours can be used for any Shopify or WordPress task you request. Our team logs time as we work, and you’ll receive a weekly report showing exactly what was done, how much time was used, and what remains.",
+  },
+  {
+    question: "What is the growth-based (percentage of sales) model?",
+    answer:
+      "For select stores with consistent traffic and revenue, we offer a performance-based partnership. Instead of upfront payments, we work on key design and development tasks in exchange for a fixed percentage of monthly sales. This aligns our success directly with yours—ideal for scaling brands ready to grow strategically.",
+  },
+  {
+    question: "Can I try the hourly model first and switch to a growth partnership later?",
+    answer:
+      "Yes, and in fact, that’s what many of our long-term clients do. Starting with an hourly package is a great way to get to know our process, communication style, and the quality of work we deliver. If we’re a good fit and you love working with us, we can explore switching to a growth-based partnership where we align incentives and go deeper together.",
+  },  
+  {
+    question: "How do I choose between hourly and revenue-based models?",
+    answer:
+      "If you prefer flexibility and control, the hourly package model is great—you buy only what you need and use it over 90 days. If you’re a growth-stage brand looking for a deeper, long-term partnership where incentives are aligned, the revenue-based option may be a better fit. We’re happy to help you decide on a discovery call.",
   },
   {
     question: "What can I use the hours for?",
     answer:
-      "You can use your hours for nearly any service we offer, including theme customizations, feature development, bug fixes, design tweaks in Figma, performance optimization, CRO improvements, plugin or app integrations, and content updates. Whether it's something small or a new feature rollout—we'll handle it as long as it fits within your purchased hours.",
+      "Hours can be used for anything we offer—Shopify or WordPress development, Figma designs, CRO audits, feature development, bug fixes, speed improvements, plugin/app integrations, and more. As long as it fits within your package, we’ll handle it.",
   },
   {
-    question: "What if I don't use all the hours?",
+    question: "How do I track time or progress?",
     answer:
-      "Your purchased hours are valid for 90 days from the date of purchase. If you haven't used them all by the end of the period, they'll expire. However, we'll remind you well in advance and help you prioritize your remaining time, so you get full value before expiry.",
+      "For hourly clients, we send a detailed weekly report with time logs, completed tasks, and your current balance. For revenue-based clients, we share weekly updates on what’s been shipped, tested, or optimized to ensure we stay aligned with your goals.",
   },
   {
-    question: "How do I track how much time has been used?",
+    question: "Do I need to commit long-term?",
     answer:
-      "We send you a detailed report every week that includes: tasks completed, time logged for each, and the remaining balance from your package. This ensures full transparency, and helps you plan ahead based on how much time you have left.",
+      "No long-term commitment is required. Our hour-based model is completely flexible and one-time. The revenue-based model involves a minimum term (usually 3–6 months) to give us enough time to make meaningful impact, but no retainers or upfront fees.",
   },
   {
-    question: "Do I need to commit to a long-term retainer?",
+    question: "Can I switch models later?",
     answer:
-      "No. This model is intentionally designed to be commitment-free. You only pay for the hours you need, with no ongoing monthly fees or long-term contracts. It's a flexible and transparent approach ideal for startups, growing brands, and lean teams.",
+      "Yes. Some clients start with hourly packages and switch to revenue-based once we’ve built trust and traction. Others do the reverse. We’re flexible, and we’ll always suggest what’s best for your business stage and goals.",
   },
   {
-    question: "What if I need something urgent?",
+    question: "What if I need something urgently?",
     answer:
-      "We understand that sometimes things are time-sensitive. If you have an urgent task, let us know when submitting the request. We prioritize based on availability and your remaining hours, and do our best to accommodate critical needs quickly.",
+      "For hourly clients, just flag the request as urgent—we’ll do our best to prioritize based on availability and your balance. For revenue-based clients, we often embed into your team’s workflow to handle urgent fixes and updates in real-time.",
   },
-]
+];
 
 export default function FAQSection() {
   return (
