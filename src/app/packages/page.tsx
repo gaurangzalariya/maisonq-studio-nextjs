@@ -2,11 +2,13 @@ import PageHero from '@/components/PageHero'
 import FAQSection from '@/components/PackageFAQSection'
 
 export const metadata = {
-  title: 'Flexible Hour-Based Pricing | MaisonQ Studio',
-  description: 'Buy flexible hourly packages (5–40 hours) for Shopify & WordPress development. No retainers. Transparent reports. High-quality results.',
+  title: 'Flexible Pricing Models | MaisonQ Studio',
+  description:
+    'Choose between hourly packages (5–40 hours) or a growth-based partnership where we work for a percentage of your store’s sales. No retainers, no fluff—just results.',
   openGraph: {
-    title: 'Our Packages – MaisonQ Studio',
-    description: 'Pay-as-you-go development model with transparent tracking and flexibility. Perfect for growing brands.',
+    title: 'Flexible Pricing – MaisonQ Studio',
+    description:
+      'Work with us on your terms. Choose hourly packages or a performance-based partnership aligned with your success. Ideal for growing Shopify & WordPress brands.',
     images: [
       {
         url: '/social-image.png',
@@ -18,8 +20,9 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Shopify & WordPress Packages – MaisonQ Studio',
-    description: 'Transparent pricing. Flexible hours. Built for brands that want premium support without retainers.',
+    title: 'Shopify & WordPress Pricing – MaisonQ Studio',
+    description:
+      'Transparent hourly packages or a growth-based model—tailored to how you want to scale. Explore flexible options built for ambitious brands.',
     images: ['/social-image.png'],
   },
 };
