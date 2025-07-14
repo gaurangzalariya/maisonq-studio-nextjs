@@ -1,6 +1,4 @@
-'use client'
-import { useState, useEffect } from 'react';
-import { MoveRight } from 'lucide-react'
+import { HeadingTwo, ButtonLarge } from './UI/UI'
 
 type SectionProps = {
   heading: string
@@ -9,15 +7,9 @@ type SectionProps = {
     label: string
     href: string
   }
-  secondaryCTA?: {
-    label: string
-    href: string
-  }
   styling?: {
     backgroundColor?: string
     textColor?: string
-    primaryCTABackgroundColor?: string
-    primaryCTATextColor?: string
   }
 }
 
@@ -25,40 +17,21 @@ export default function TextSection({
   heading,
   subtext,
   primaryCTA,
-  secondaryCTA,
   styling,
 }: SectionProps) {
-  const [cleanHTML, setCleanHTML] = useState(subtext);
-
-  useEffect(() => {
-    const sanitizeHTML = async () => {
-      const DOMPurify = (await import('dompurify')).default;
-      setCleanHTML(DOMPurify.sanitize(subtext));
-    };
-    sanitizeHTML();
-  }, [subtext]);
 
   return (
     <div className={`relative isolate px-6 lg:px-8 ${styling?.backgroundColor ? `${styling.backgroundColor}` : ''} ${styling?.textColor ? `${styling.textColor}` : ''}`}>
       <div className="mx-auto max-w-5xl py-15 lg:py-30">
         <div className="text-center">
-          <h2 className="text-4xl font-secondary font-semibold tracking-tight text-balance sm:text-6xl">
-            {heading}
-          </h2>
-          <div
-            className="mt-8 text-lg font-medium text-pretty sm:text-xl/8"
-            dangerouslySetInnerHTML={{ __html: cleanHTML }}
-          />
+          <div className='flex flex-col gap-4 lg:gap-8'><HeadingTwo heading={heading} subtext={subtext} /></div>
           {primaryCTA && (
-            <div className="mt-10 flex items-center justify-center gap-x-6">            
-              <a href={primaryCTA.href} className={`rounded-md ${styling?.primaryCTABackgroundColor ? `${styling.primaryCTABackgroundColor}` : 'bg-indigo-600'} px-5.5 py-3 text-lg font-semibold ${styling?.primaryCTATextColor ? `${styling.primaryCTATextColor}` : 'text-white'} shadow-xs`}>
-                {primaryCTA.label} <MoveRight className="inline-block ml-1 w-4 h-4" aria-hidden="true" />
-              </a>
-              {secondaryCTA && (
-                <a href={secondaryCTA.href} className="text-sm/6 font-semibold">
-                  {secondaryCTA.label} <MoveRight className="inline-block ml-1 w-4 h-4" aria-hidden="true" />
-                </a>
-              )}
+            <div className="mt-10 flex items-center justify-center gap-x-6">
+              <ButtonLarge
+                  label={primaryCTA.label}
+                  href={primaryCTA.href}
+                  icon={true}
+              />
             </div>
           )}
         </div>

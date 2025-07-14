@@ -3,7 +3,7 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
-import { MoveRight } from 'lucide-react'
+import { ButtonText, HeadingThree } from './UI/UI'
 
 interface ResponsiveCardProps {
   title: string
@@ -91,19 +91,10 @@ export default function ResponsiveCard({
         </div>
       )}
       <div className='w-full lg:w-1/2 flex flex-col gap-2 lg:gap-4'>
-      <h3 className="
-        font-secondary text-2xl font-semibold text-gray-900 leading-tight
-        lg:text-4xl                      // Large: max size
-      ">
-        {title}
-      </h3>
-      
-      <p className="
-        text-sm text-gray-600 leading-relaxed
-        sm:text-lg                     // Small: readable size
-      ">
-        {description}
-      </p>
+      <HeadingThree
+        heading={title}
+        subtext={description}
+      />
       
       {href && (
         <motion.div
@@ -111,11 +102,11 @@ export default function ResponsiveCard({
           whileHover={shouldReduceMotion ? undefined : { x: 5 }}
           transition={{ duration: 0.2 }}
         >
-          <span className="
-            inline-flex items-center rounded-md bg-[#938f8a] px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs
-          ">
-            Learn more <MoveRight className="inline-block ml-1 w-4 h-4" aria-hidden="true" />
-          </span>
+          <ButtonText
+            label="Learn more"
+            href={href}
+            icon={true}
+          />
         </motion.div>
       )}
       </div>
@@ -124,15 +115,14 @@ export default function ResponsiveCard({
 
   if (href) {
     return (
-      <motion.a
-        href={href}
+      <motion.div
         className="block min-h-[44px] min-w-[44px]" // Touch-friendly minimum size
         variants={hoverVariants}
         whileHover={shouldReduceMotion ? undefined : "hover"}
         whileTap={shouldReduceMotion ? undefined : "tap"}
       >
         <CardContent />
-      </motion.a>
+      </motion.div>
     )
   }
 

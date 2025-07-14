@@ -1,18 +1,45 @@
 'use client'
 
-import { useState } from 'react'
-import { Dialog, DialogPanel } from '@headlessui/react'
+import { useState, useRef } from 'react'
+import { Dialog, DialogPanel, Popover, PopoverButton, PopoverGroup, PopoverPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import { MoveRight } from 'lucide-react'
+import { 
+  Palette, 
+  ShoppingBag,
+  FileCode,
+  ChevronDown 
+} from 'lucide-react'
+import { ButtonText, ButtonLarge } from './UI/UI'
+
 import logo from '../../public/logo.png'
 
+const services = [
+  {
+    name: 'Shopify Development',
+    description: 'Custom themes and e-commerce solutions',
+    href: '/services/shopify-development',
+    icon: ShoppingBag
+  },
+  {
+    name: 'WordPress Development',
+    description: 'Custom CMS and website solutions',
+    href: '/services/wordpress-development',
+    icon: FileCode
+  },
+  {
+    name: 'Design Partnerships',
+    description: 'Custom design systems and UI/UX solutions',
+    href: '/services/design-partnerships',
+    icon: Palette
+  },
+]
+
 const navigation = [
-  { name: 'About', href: '/about' },
-  { name: 'Services', href: '/services' },
   { name: 'Packages', href: '/packages' },
+  { name: 'About', href: '/about' },
 ]
 
 // Animation variants for mobile menu
@@ -55,6 +82,19 @@ const hamburgerVariants = {
 export default function Mynavbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const shouldReduceMotion = useReducedMotion()
+  const [isHovering, setIsHovering] = useState(false)
+  const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  const handleMouseLeave = () => {
+    closeTimeoutRef.current = setTimeout(() => setIsHovering(false), 150)
+  }
+
+  const handleMouseEnter = () => {
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current)
+    }
+    setIsHovering(true)
+  }
 
   return (
     <>
@@ -92,17 +132,80 @@ export default function Mynavbar() {
             </motion.div>
           </motion.button>
         </div>
-        <div className="hidden lg:flex lg:gap-x-12">
+        <PopoverGroup className="hidden lg:flex lg:gap-x-12">
+          <Popover className="relative">
+            {({ open }) => (
+              <div 
+                className="relative"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              >
+                <PopoverButton 
+                  className="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900 hover:text-gray-600 transition-colors"
+                >
+                  <Link 
+                    href="/services"
+                    className="hover:text-gray-600 transition-colors"
+                  >
+                    Services
+                  </Link>
+                  <ChevronDown 
+                    className={`size-4 transition-transform duration-200 ${open ? 'rotate-180' : ''}`} 
+                    aria-hidden="true" 
+                  />
+                </PopoverButton>
+                <AnimatePresence>
+                  {(open || isHovering) && (
+                    <PopoverPanel
+                      static
+                      className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5"
+                    >
+                      <div className="p-4">
+                        <div className="grid">
+                          {services.map((item) => (
+                            <div
+                              key={item.name}
+                              className="group relative flex items-center gap-x-6 rounded-lg p-3 text-sm/6 hover:bg-[#edecea] transition duration-150 ease-in-out cursor-pointer"
+                            >
+                              <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                <item.icon className="size-6 text-gray-600 group-hover:text-gray-900" aria-hidden="true" />
+                              </div>
+                              <div className="flex-auto">
+                                <Link
+                                  href={item.href}
+                                  className="block font-semibold text-gray-900"
+                                >
+                                  {item.name}
+                                  <span className="absolute inset-0" />
+                                </Link>
+                                <p className="text-sm text-gray-500">{item.description}</p>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </PopoverPanel>
+                  )}
+                </AnimatePresence>
+              </div>
+            )}
+          </Popover>
           {navigation.map((item) => (
-            <a key={item.name} href={item.href} className="text-sm/6 font-semibold text-gray-900">
+            <Link 
+              key={item.name} 
+              href={item.href} 
+              className="text-sm/6 font-semibold text-gray-900 hover:text-gray-600 transition-colors"
+            >
               {item.name}
-            </a>
+            </Link>
           ))}
-        </div>
+        </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="/contact" className="text-sm/6 font-semibold text-gray-900">
-            Contact Today <MoveRight className="inline-block ml-1 w-4 h-4" aria-hidden="true" />
-          </a>
+          <ButtonText
+            label="Contact Today"
+            href="/contact"
+            icon={true}
+          />
         </div>
       </nav>
       <AnimatePresence>
@@ -175,6 +278,44 @@ export default function Mynavbar() {
                       variants={shouldReduceMotion ? {} : navigationItemVariants}
                       transition={{ duration: 0.3, ease: "easeOut" as const }}
                     >
+                      {/* Services section in mobile menu */}
+                      <div className="space-y-2">
+                        <Link
+                          href="/services"
+                          className="block text-base/7 font-semibold text-gray-900 hover:text-gray-600 transition-colors"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          Services
+                        </Link>
+                        {services.map((item, index) => (
+                          <motion.div
+                            key={item.name}
+                            variants={shouldReduceMotion ? {} : navigationItemVariants}
+                            transition={{ duration: 0.3, ease: "easeOut" as const, delay: (navigation.length + index) * 0.1 }}
+                          >
+                            <Link
+                              href={item.href}
+                              className="-mx-3 block rounded-lg px-3 py-2 hover:bg-gray-50 min-h-[44px] transition-colors duration-200"
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              <div className="flex items-center">
+                                <item.icon className="size-5 text-gray-600" aria-hidden="true" />
+                                <div className="ml-3">
+                                  <p className="text-base/7 font-semibold text-gray-900">{item.name}</p>
+                                  <p className="text-sm text-gray-500">{item.description}</p>
+                                </div>
+                              </div>
+                            </Link>
+                          </motion.div>
+                        ))}
+                      </div>
+                    </motion.div>
+                    
+                    <motion.div 
+                      className="py-6"
+                      variants={shouldReduceMotion ? {} : navigationItemVariants}
+                      transition={{ duration: 0.3, ease: "easeOut" as const }}
+                    >
                       {navigation.map((item, index) => (
                         <motion.div
                           key={item.name}
@@ -190,20 +331,18 @@ export default function Mynavbar() {
                           </Link>
                         </motion.div>
                       ))}
-                    </motion.div>
-                    
-                    <motion.div 
-                      className="py-6"
-                      variants={shouldReduceMotion ? {} : navigationItemVariants}
-                      transition={{ duration: 0.3, ease: "easeOut" as const }}
-                    >
-                      <Link
-                        href="/contact"
-                        className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 min-h-[44px] flex items-center transition-colors duration-200"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        Contact Today <MoveRight className="inline-block ml-1 w-4 h-4" aria-hidden="true" />
-                      </Link>
+                      <motion.div
+                          key="contact"
+                          className="flex mt-6"
+                          variants={shouldReduceMotion ? {} : navigationItemVariants}
+                          transition={{ duration: 0.3, ease: "easeOut" as const, delay: (navigation.length + services.length) * 0.1 }}
+                        >
+                        <ButtonLarge
+                          label="Contact Today"
+                          href="/contact"
+                          icon={true}
+                        />
+                      </motion.div>
                     </motion.div>
                   </div>
                 </div>

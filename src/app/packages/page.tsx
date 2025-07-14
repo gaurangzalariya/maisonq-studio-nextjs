@@ -1,5 +1,6 @@
 import PageHero from '@/components/PageHero'
 import FaqSection from '@/components/FaqSection'
+import { HeadingThree } from '@/components/UI/UI'
 
 export const metadata = {
   title: 'Flexible Pricing Models | MaisonQ Studio',
@@ -90,9 +91,12 @@ export default function Packages() {
         }}
       />
       <section className="text-center px-6 py-24 sm:py-32 max-w-5xl mx-auto lg:py-40">
-        <h3 className="text-3xl font-secondary md:text-5xl font-semibold mb-4">
-          Hourly Packages
-        </h3>
+        <div className='mb-4'>
+          <HeadingThree
+            heading="Hourly Packages"
+            subtext=""
+          />
+        </div>
         
         <p className="text-lg mb-8">
           We work on a flexible hour-based model designed for growing brands.<br />
@@ -112,9 +116,12 @@ export default function Packages() {
 
         <hr className="my-15 border-t border-[#938f8a] opacity-40" />
 
-        <h3 className="text-3xl font-secondary md:text-5xl font-semibold mb-4">
-          Growth-Based Partnership
-        </h3>
+        <div className='mb-4'>
+          <HeadingThree
+            heading="Growth-Based Partnership"
+            subtext=""
+          />
+        </div>
 
         <p className="text-lg mb-8">
           Prefer to align our success with yours? For select clients, we offer a performance-based model where our compensation is tied to your store&apos;s revenue growth.

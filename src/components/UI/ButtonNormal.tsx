@@ -1,0 +1,44 @@
+'use client'
+
+import { MoveRight } from 'lucide-react'
+import { motion, useReducedMotion } from 'framer-motion'
+
+const buttonVariants = {
+    initial: {
+        scale: 1
+    },
+    hover: {
+        scale: 1.05
+    },
+    tap: {
+        scale: 0.95
+    }
+}
+
+export interface ButtonNormalProps {
+    label: string
+    href: string
+    icon: boolean
+}
+
+export default function ButtonNormal({
+    label,
+    href,
+    icon,
+}: ButtonNormalProps) {
+    const shouldReduceMotion = useReducedMotion()
+
+    return (
+        <motion.a 
+            href={href} 
+            className={`rounded-md bg-[#938f8a] text-white px-3.5 py-2.5 text-sm font-semibold shadow-xs`}
+            variants={buttonVariants}
+            initial="initial"
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            whileHover={shouldReduceMotion ? undefined : 'hover'}
+            whileTap={shouldReduceMotion ? undefined : 'tap'}
+        >
+            {label} {icon && <MoveRight className="inline-block ml-1 w-4 h-4" aria-hidden="true" />}
+        </motion.a>
+    )
+}

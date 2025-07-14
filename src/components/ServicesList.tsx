@@ -1,7 +1,8 @@
 'use client';
 
-import { motion, easeInOut, useReducedMotion } from 'framer-motion';
-import { MoveRight, LucideIcon } from 'lucide-react';
+import { motion, easeInOut } from 'framer-motion';
+import { LucideIcon } from 'lucide-react';
+import { ButtonLarge } from './UI/UI';
 
 type Service = {
   label: string;
@@ -37,20 +38,6 @@ const itemVariants = {
   },
 };
 
-const buttonVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-  },
-  hover: {
-    scale: 1.05,
-  },
-  tap: {
-    scale: 0.95,
-  },
-}
-
 export default function ServiceListSection({
   title = 'Our Expertise Includes:',
   intro,
@@ -58,7 +45,6 @@ export default function ServiceListSection({
   services,
   className = '',
 }: ServiceListSectionProps) {
-  const shouldReduceMotion = useReducedMotion()
 
   return (
     <section className={`text-center px-6 py-24 sm:py-32 max-w-7xl mx-auto lg:py-40 ${className}`}>
@@ -118,16 +104,11 @@ export default function ServiceListSection({
         className="mt-14 flex items-center justify-center gap-x-6"
         variants={itemVariants}
       >
-        <motion.a
+        <ButtonLarge
+          label="Book Free Audit"
           href="/contact"
-          className="rounded-md bg-gray-900 px-5.5 py-2.5 text-lg font-semibold text-white shadow-xs"
-          variants={buttonVariants}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-          whileHover={shouldReduceMotion ? undefined : 'hover'}
-          whileTap={shouldReduceMotion ? undefined : 'tap'}
-        >
-          Book Free Audit <MoveRight className="inline-block ml-1 w-4 h-4" aria-hidden="true" />
-        </motion.a>
+          icon={true}
+        />
       </motion.div>
     </section>
   );

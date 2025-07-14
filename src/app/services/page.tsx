@@ -105,6 +105,10 @@ export default function Services() {
       <TextSection
         heading="Where Collaboration Meets Craftsmanship"
         subtext="At MaisonQ Studio, we follow a studio-style rhythm—lean, hands-on, and detail-focused. Every project is a shared journey, with regular check-ins, transparent communication, and a deep respect for craftsmanship. We don't do templates or handoffs. We do partnerships."
+        primaryCTA={{
+          label: "Let's Work Together",
+          href: '/contact'
+        }}
         styling={{
           backgroundColor: 'bg-[#edecea]',
           textColor: 'text-gray-900',

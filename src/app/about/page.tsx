@@ -73,10 +73,6 @@ export default function About() {
         heading="Why MaisonQ?"
         subtext="Our studio is built for companies that value detail, partnership, and growth. We approach every project with an ownership mindset-because your success is our success."
         primaryCTA={{ label: 'Start a Conversation', href: '/contact' }}
-        styling={{
-          primaryCTABackgroundColor: 'bg-[#938f8a]',
-          primaryCTATextColor: 'text-white'
-        }}
       />
       <FaqSection faqs={faqs} title="Frequently asked questions" />
     </>

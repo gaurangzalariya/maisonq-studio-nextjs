@@ -6,6 +6,7 @@ import {
   DisclosurePanel,
 } from '@headlessui/react';
 import { MinusSmallIcon, PlusSmallIcon } from '@heroicons/react/24/outline';
+import { HeadingThree } from './UI/UI';
 
 type FAQItem = {
   question: string;
@@ -27,9 +28,12 @@ export default function FaqSection({
     <div className={`bg-[#938f8a] ${className}`}>
       <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
         <div className="mx-auto max-w-4xl">
-          <h2 className="text-4xl font-secondary font-semibold tracking-tight text-white sm:text-5xl text-center">
-            {title}
-          </h2>
+          <div className='text-white text-center'>
+            <HeadingThree 
+              heading={title}
+              subtext=""
+            />
+          </div>
           <dl className="mt-16 divide-y divide-white/10">
             {faqs.map((faq) => (
               <Disclosure
