@@ -1,5 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react';
+import { MoveRight } from 'lucide-react'
 
 type SectionProps = {
   heading: string
@@ -50,12 +51,12 @@ export default function TextSection({
           />
           {primaryCTA && (
             <div className="mt-10 flex items-center justify-center gap-x-6">            
-              <a href={primaryCTA.href} className={`rounded-md ${styling?.primaryCTABackgroundColor ? `${styling.primaryCTABackgroundColor}` : 'bg-indigo-600'} px-5 py-3 text-base font-semibold ${styling?.primaryCTATextColor ? `${styling.primaryCTATextColor}` : 'text-white'} shadow-xs`}>
-                {primaryCTA.label} <span aria-hidden="true">→</span>
+              <a href={primaryCTA.href} className={`rounded-md ${styling?.primaryCTABackgroundColor ? `${styling.primaryCTABackgroundColor}` : 'bg-indigo-600'} px-5.5 py-3 text-lg font-semibold ${styling?.primaryCTATextColor ? `${styling.primaryCTATextColor}` : 'text-white'} shadow-xs`}>
+                {primaryCTA.label} <MoveRight className="inline-block ml-1 w-4 h-4" aria-hidden="true" />
               </a>
               {secondaryCTA && (
                 <a href={secondaryCTA.href} className="text-sm/6 font-semibold">
-                  {secondaryCTA.label} <span aria-hidden="true">→</span>
+                  {secondaryCTA.label} <MoveRight className="inline-block ml-1 w-4 h-4" aria-hidden="true" />
                 </a>
               )}
             </div>

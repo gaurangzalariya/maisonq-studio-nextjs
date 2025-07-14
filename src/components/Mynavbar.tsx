@@ -6,6 +6,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
+import { MoveRight } from 'lucide-react'
 import logo from '../../public/logo.png'
 
 const navigation = [
@@ -100,7 +101,7 @@ export default function Mynavbar() {
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a href="/contact" className="text-sm/6 font-semibold text-gray-900">
-            Contact Today <span aria-hidden="true">&rarr;</span>
+            Contact Today <MoveRight className="inline-block ml-1 w-4 h-4" aria-hidden="true" />
           </a>
         </div>
       </nav>
@@ -201,7 +202,7 @@ export default function Mynavbar() {
                         className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 min-h-[44px] flex items-center transition-colors duration-200"
                         onClick={() => setMobileMenuOpen(false)}
                       >
-                        Contact Today
+                        Contact Today <MoveRight className="inline-block ml-1 w-4 h-4" aria-hidden="true" />
                       </Link>
                     </motion.div>
                   </div>

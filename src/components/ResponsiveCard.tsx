@@ -3,6 +3,7 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
+import { MoveRight } from 'lucide-react'
 
 interface ResponsiveCardProps {
   title: string
@@ -106,17 +107,14 @@ export default function ResponsiveCard({
       
       {href && (
         <motion.div
+        className='mt-4'
           whileHover={shouldReduceMotion ? undefined : { x: 5 }}
           transition={{ duration: 0.2 }}
         >
           <span className="
-            inline-flex items-center text-sm font-medium text-[#938f8a]
-            sm:text-base                 // Small: larger link text
+            inline-flex items-center rounded-md bg-[#938f8a] px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs
           ">
-            Learn more 
-            <svg className="ml-1 w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
+            Learn more <MoveRight className="inline-block ml-1 w-4 h-4" aria-hidden="true" />
           </span>
         </motion.div>
       )}

@@ -1,6 +1,7 @@
 'use client'
 
 import { motion, useReducedMotion } from 'framer-motion'
+import { MoveRight } from 'lucide-react'
 
 type HeroProps = {
   heading: string
@@ -99,7 +100,7 @@ export default function PageHero({
                   whileHover={shouldReduceMotion ? undefined : 'hover'}
                   whileTap={shouldReduceMotion ? undefined : 'tap'}
                 >
-                  {primaryCTA.label} <span aria-hidden="true">→</span>
+                  {primaryCTA.label} <MoveRight className="inline-block ml-1 w-4 h-4" aria-hidden="true" />
                 </motion.a>
                 {secondaryCTA && (
                   <motion.a
@@ -110,7 +111,7 @@ export default function PageHero({
                     whileHover={shouldReduceMotion ? undefined : { scale: 1.05 }}
                     whileTap={shouldReduceMotion ? undefined : { scale: 0.95 }}
                   >
-                    {secondaryCTA.label} <span aria-hidden="true">→</span>
+                    {secondaryCTA.label} <MoveRight className="inline-block ml-1 w-4 h-4" aria-hidden="true" />
                   </motion.a>
                 )}
               </motion.div>

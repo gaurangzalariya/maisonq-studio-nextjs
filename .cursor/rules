@@ -3,6 +3,43 @@
 ## Project Stack
 Next.js 15 + TypeScript + Tailwind CSS + Framer Motion
 
+## Package Usage Guidelines
+
+### Icons & UI Components
+- Use `lucide-react` for ALL icons - DO NOT install other icon libraries
+- Use `@headlessui/react` for accessible UI components (modals, dropdowns, etc.)
+- AVOID installing alternative UI libraries
+
+### Animation & Motion
+- Use `framer-motion` for ALL animations
+- AVOID installing alternative animation libraries like `react-spring` or `gsap`
+- Use built-in Next.js transitions when possible
+
+### Styling
+- Use `tailwindcss` for ALL styling
+- AVOID installing CSS-in-JS libraries
+- AVOID installing additional styling utilities
+- Use `@tailwindcss/postcss` for PostCSS plugins
+
+### Security
+- Use `dompurify` for sanitizing HTML content
+- AVOID installing alternative sanitization libraries
+
+### Common Functionality
+Before installing new packages, check if we can use:
+1. Built-in Next.js features
+2. Built-in React hooks
+3. Existing utility functions
+4. Existing components
+
+### Package Installation Checklist
+Before adding new packages:
+1. Check if functionality exists in current dependencies
+2. Check if Next.js has built-in solution
+3. Check bundle size impact
+4. Verify TypeScript support
+5. Check maintenance status & security
+
 ## Critical Rules to Prevent Linter Errors
 
 ### TypeScript/Framer Motion
