@@ -3,13 +3,13 @@ import { ServicePageContent } from '../types';
 export const content: ServicePageContent = {
   hero: {
     heading: "Design Partnerships, Not Just Projects",
-    subtext: "From strategy to screens, we co-create digital experiences with your team—built in Figma, tuned for growth, and ready to scale.",
+    subtext: "From strategy to screens, we co-create digital experiences with your team-built in Figma, tuned for growth, and ready to scale.",
     ctaLabel: "Let's Design Together",
   },
   services: {
     title: "Our Design Expertise Includes:",
     intro: "More than a one-time service, our design offering is collaborative. Starting in Figma, we work hand-in-hand with your team to shape digital products that align with your goals and visual identity.",
-    subIntro: "From design systems to UI/UX, our focus is on harmony—balancing form and function, style and strategy. We stay with you from concept to final build and beyond, offering ongoing design and dev support as your brand evolves.",
+    subIntro: "From design systems to UI/UX, our focus is on harmony-balancing form and function, style and strategy. We stay with you from concept to final build and beyond, offering ongoing design and dev support as your brand evolves.",
     list: [
       { label: "Collaborative design workflow in Figma", iconName: "PencilLine" },
       { label: "Design systems and scalable UI kits", iconName: "Layers" },
@@ -23,11 +23,11 @@ export const content: ServicePageContent = {
   faqs: [
     {
       question: "How do you collaborate with internal design or product teams?",
-      answer: "We plug in where you need us—whether that's co-creating in Figma, leading UI/UX, or supporting your existing design system. Our team adapts to your workflow, not the other way around.",
+      answer: "We plug in where you need us-whether that's co-creating in Figma, leading UI/UX, or supporting your existing design system. Our team adapts to your workflow, not the other way around.",
     },
     {
       question: "Do you only design, or can you help build too?",
-      answer: "Both. We're a hybrid design-dev studio. We often handle full-stack implementation of what we design—or work directly with your in-house developers to support handoff and QA.",
+      answer: "Both. We're a hybrid design-dev studio. We often handle full-stack implementation of what we design-or work directly with your in-house developers to support handoff and QA.",
     },
     {
       question: "Can you create a design system for our brand?",
@@ -39,7 +39,7 @@ export const content: ServicePageContent = {
     },
     {
       question: "How do you ensure designs are dev-ready?",
-      answer: "We keep handoff in mind from day one—clean layers, clear naming, design tokens, and real components in Figma. If we're also developing, this ensures a seamless design-to-code transition.",
+      answer: "We keep handoff in mind from day one-clean layers, clear naming, design tokens, and real components in Figma. If we're also developing, this ensures a seamless design-to-code transition.",
     },
     {
       question: "Do you follow accessibility and usability best practices?",

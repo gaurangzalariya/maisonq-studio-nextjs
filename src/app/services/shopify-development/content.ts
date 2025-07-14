@@ -8,8 +8,8 @@ export const content: ServicePageContent = {
   },
   services: {
     title: "Our Shopify Expertise Includes:",
-    intro: "At MaisonQ Studio, we help brands unlock the full potential of Shopify and Shopify Plus. From bespoke theme development and CRO-optimized interfaces to third-party integrations and headless architecture—we bring deep expertise and design-first thinking to every build.",
-    subIntro: "We don't just launch stores—we build digital foundations that perform. Whether you're migrating from another platform, improving your current setup, or scaling into Shopify Plus, we partner with you to deliver tailored solutions that feel as good as they function.",
+    intro: "At MaisonQ Studio, we help brands unlock the full potential of Shopify and Shopify Plus. From bespoke theme development and CRO-optimized interfaces to third-party integrations and headless architecture-we bring deep expertise and design-first thinking to every build.",
+    subIntro: "We don't just launch stores-we build digital foundations that perform. Whether you're migrating from another platform, improving your current setup, or scaling into Shopify Plus, we partner with you to deliver tailored solutions that feel as good as they function.",
     list: [
       { label: "Custom theme design & development (no templates)", iconName: "Brush" },
       { label: "Performance tuning & core web vitals optimization", iconName: "GaugeCircle" },
@@ -23,11 +23,11 @@ export const content: ServicePageContent = {
   faqs: [
     {
       question: "Do you use pre-made themes or design from scratch?",
-      answer: "We design and build fully custom Shopify themes tailored to your brand and business needs—no templates or one-size-fits-all solutions. Every pixel is crafted to support your conversion goals and brand identity.",
+      answer: "We design and build fully custom Shopify themes tailored to your brand and business needs-no templates or one-size-fits-all solutions. Every pixel is crafted to support your conversion goals and brand identity.",
     },
     {
       question: "What's the difference between Shopify and Shopify Plus?",
-      answer: "Shopify Plus is the enterprise version of Shopify—designed for high-volume stores needing advanced features like customizable checkout, API access, automation tools, and priority support. We help you decide which platform fits your business, and support both.",
+      answer: "Shopify Plus is the enterprise version of Shopify-designed for high-volume stores needing advanced features like customizable checkout, API access, automation tools, and priority support. We help you decide which platform fits your business, and support both.",
     },
     {
       question: "Can you migrate my store from another platform to Shopify?",
@@ -35,7 +35,7 @@ export const content: ServicePageContent = {
     },
     {
       question: "Do you offer support after the store is launched?",
-      answer: "Absolutely. We offer hourly support packages, retainers, and performance monitoring options. Whether it's fixing bugs, adding features, or improving performance—we're here for ongoing growth.",
+      answer: "Absolutely. We offer hourly support packages, retainers, and performance monitoring options. Whether it's fixing bugs, adding features, or improving performance-we're here for ongoing growth.",
     },
     {
       question: "Can you integrate third-party apps or custom features?",
@@ -43,11 +43,11 @@ export const content: ServicePageContent = {
     },
     {
       question: "Do you offer CRO (conversion rate optimization) services?",
-      answer: "Yes, all of our designs are built with CRO in mind—from layout structure to speed optimization and buyer flows. We also offer audits, A/B testing, and iteration plans to help increase conversions post-launch.",
+      answer: "Yes, all of our designs are built with CRO in mind-from layout structure to speed optimization and buyer flows. We also offer audits, A/B testing, and iteration plans to help increase conversions post-launch.",
     },
     {
       question: "How long does a typical Shopify project take?",
-      answer: "A typical custom Shopify build takes 3–6 weeks depending on scope. This includes design, development, QA, and handoff. Migrations and Plus builds may take longer based on complexity.",
+      answer: "A typical custom Shopify build takes 3-6 weeks depending on scope. This includes design, development, QA, and handoff. Migrations and Plus builds may take longer based on complexity.",
     },
     {
       question: "Can you work with our internal marketing or design team?",
@@ -59,7 +59,7 @@ export const content: ServicePageContent = {
     },
     {
       question: "What's the best way to get started?",
-      answer: "Start with a quick discovery call. We'll discuss your goals, current setup, and how we can help—whether that's a full redesign, migration, optimization, or long-term partnership.",
+      answer: "Start with a quick discovery call. We'll discuss your goals, current setup, and how we can help-whether that's a full redesign, migration, optimization, or long-term partnership.",
     },
   ],
 }; 

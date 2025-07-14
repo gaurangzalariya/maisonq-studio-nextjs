@@ -14,8 +14,8 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: 'MaisonQ Studio',
-  description: 'MaisonQ Studio - Interior Design & Architecture',
+  title: "MaisonQ Studio",
+  description: "MaisonQ Studio - Interior Design & Architecture",
   metadataBase: new URL('https://maisonq.studio'),
   icons: {
     icon: [
@@ -26,21 +26,21 @@ export const metadata = {
     apple: './favicon.png',
   },
   openGraph: {
-    title: 'MaisonQ Studio',
-    description: 'MaisonQ Studio - Interior Design & Architecture',
+    title: "MaisonQ Studio",
+    description: "MaisonQ Studio - Interior Design & Architecture",
     images: [
       {
         url: '/social-image.png',
         width: 1200,
         height: 630,
-        alt: 'MaisonQ Studio',
+        alt: "MaisonQ Studio",
       }
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'MaisonQ Studio',
-    description: 'MaisonQ Studio - Interior Design & Architecture',
+    title: "MaisonQ Studio",
+    description: "MaisonQ Studio - Interior Design & Architecture",
     images: ['/social-image.png'],
   },
 };
