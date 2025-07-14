@@ -5,7 +5,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Container from "@/components/Container";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
-import PageTransition from "@/components/PageTransition";
 
 // Initialize font
 const inter = Inter({
@@ -69,9 +68,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="font-primary text-gray-900 bg-[#f8f8f8]">
         <Container>
           <Header />
-          <main>
-            <PageTransition>{children}</PageTransition>
-          </main>
+          <main>{children}</main>
           <Footer />
         </Container>
       </body>
