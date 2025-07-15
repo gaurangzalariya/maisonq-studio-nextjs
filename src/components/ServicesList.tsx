@@ -2,7 +2,7 @@
 
 import { motion, easeInOut } from 'framer-motion';
 import { LucideIcon } from 'lucide-react';
-import { ButtonLarge } from './UI/UI';
+import { ButtonLarge, ButtonText } from './UI/UI';
 
 type Service = {
   label: string;
@@ -101,12 +101,17 @@ export default function ServiceListSection({
         ))}
       </motion.ul>
       <motion.div
-        className="mt-14 flex items-center justify-center gap-x-6"
+        className="mt-14 flex flex-col gap-y-8 gap-x-6 lg:flex-row items-center justify-center"
         variants={itemVariants}
       >
         <ButtonLarge
           label="Book Free Audit"
           href="/contact"
+          icon={false}
+        />
+        <ButtonText
+          label="Explore Engagement Models"
+          href="/packages"
           icon={true}
         />
       </motion.div>
