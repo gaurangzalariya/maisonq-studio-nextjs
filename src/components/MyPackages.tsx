@@ -2,7 +2,7 @@
 
 import { motion, Variants } from 'framer-motion';
 import { CheckCircle, ArrowRight, Clock, CreditCard, TrendingUp, BarChart } from 'lucide-react';
-import HeadingThree from './UI/HeadingThree';
+import { HeadingTwo } from './UI/UI';
 import React from 'react';
 
 interface PackageItem {
@@ -125,7 +125,7 @@ const MyPackages = () => {
     <section className="px-6 py-24 sm:py-32 lg:py-40 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <HeadingThree 
+          <HeadingTwo 
             heading="Partnerships, Built Around You" 
             subtext="Choose a working model that aligns with how you scale best."
           />
@@ -157,10 +157,10 @@ const MyPackages = () => {
 
               <div className="flex items-center gap-4 mb-6">
                 {pkg.icon}
-                <h3 className="text-2xl font-semibold text-gray-900">{pkg.title}</h3>
+                <h3 className="text-3xl lg:text-4xl font-secondary font-semibold text-gray-900 text-pretty">{pkg.title}</h3>
               </div>
 
-              <p className="text-lg mb-8 text-gray-600">
+              <p className="text-lg mb-8 text-gray-600 text-pretty">
                 {pkg.description}
               </p>
 
@@ -182,7 +182,7 @@ const MyPackages = () => {
                 ))}
               </ul>
 
-              <p className="text-sm italic text-gray-500 mb-8">
+              <p className="text-sm italic text-gray-500 mb-8 text-pretty">
                 {pkg.outro}
               </p>
 
