@@ -98,7 +98,7 @@ export default function GoogleAnalytics() {
               page_title: document.title,
               page_location: window.location.href,
               // Performance optimizations
-              send_page_view: true,
+              send_page_view: false,
               transport_type: 'beacon',
               custom_map: {
                 custom_parameter_1: 'web_vitals'
@@ -111,4 +111,4 @@ export default function GoogleAnalytics() {
       />
     </>
   );
-} 
+}
