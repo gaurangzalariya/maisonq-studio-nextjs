@@ -4,7 +4,6 @@ import { useState, useRef } from 'react'
 import { Dialog, DialogPanel, Popover, PopoverButton, PopoverGroup, PopoverPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion'
-import Image from 'next/image'
 import Link from 'next/link'
 import { 
   Palette, 
@@ -12,9 +11,7 @@ import {
   FileCode,
   ChevronDown 
 } from 'lucide-react'
-import { ButtonText, ButtonLarge } from './UI/UI'
-
-import logo from '../../public/logo.png'
+import { ButtonText, ButtonLarge, BrandLogo } from './UI/UI'
 
 const services = [
   {
@@ -102,14 +99,7 @@ export default function Mynavbar() {
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">MaisonQ Studio</span>
-            <Image 
-              src={logo} 
-              alt="MaisonQ Studio"
-              className='h-12 w-auto' 
-              priority 
-              quality={90}
-              loading="eager"
-            />
+            <BrandLogo className="h-12 w-auto text-[#938f8a]" />
           </Link>
         </div>
         <div className="flex lg:hidden">
@@ -249,7 +239,7 @@ export default function Mynavbar() {
                 >
                   <Link href="/" className="-m-1.5 p-1.5">
                     <span className="sr-only">MaisonQ Studio</span>
-                    <Image src={logo} alt="MaisonQ Studio" className='h-12 w-auto' />
+                    <BrandLogo className="h-12 w-auto text-[#938f8a]" />
                   </Link>
                   <motion.button
                     type="button"

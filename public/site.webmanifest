@@ -1,0 +1,21 @@
+{
+    "name": "MaisonQ Studio",
+    "short_name": "MaisonQ",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#f8f8f8",
+    "theme_color": "#938f8a",
+    "description": "MaisonQ Studio is a Shopify and WordPress development studio that helps brands build great digital experiences.",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

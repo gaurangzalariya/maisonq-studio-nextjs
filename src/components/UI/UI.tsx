@@ -5,6 +5,7 @@ export { default as ButtonLarge } from './ButtonLarge'
 export { default as HeadingOne } from './HeadingOne'
 export { default as HeadingTwo } from './HeadingTwo'
 export { default as HeadingThree } from './HeadingThree'
+export { default as BrandLogo } from './BrandLogo'
 
 // Type exports
 export type { ButtonNormalProps } from './ButtonNormal'
@@ -13,3 +14,4 @@ export type { ButtonLargeProps } from './ButtonLarge'
 export type { HeadingOneProps } from './HeadingOne'
 export type { HeadingTwoProps } from './HeadingTwo'
 export type { HeadingThreeProps } from './HeadingThree'
+export type { BrandLogoProps } from './BrandLogo'
