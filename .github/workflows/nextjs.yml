@@ -84,7 +84,6 @@ jobs:
       - name: Copy our favicon
         run: |
           cp ./public/favicon.ico ./out/
-          cp ./public/favicon.png ./out/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
