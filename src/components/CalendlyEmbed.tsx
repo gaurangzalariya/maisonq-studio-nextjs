@@ -17,7 +17,7 @@ const CalendlyEmbed: React.FC<CalendlyEmbedProps> = ({
   }, []);
 
   return (
-    <section className="calendly-wrapper w-full py-15 lg:py-30">
+    <section className="calendly-wrapper w-full">
       <div className="calendly-inline-widget min-w-[320px] h-[800px]" data-url={url}></div>
     </section>
   );
