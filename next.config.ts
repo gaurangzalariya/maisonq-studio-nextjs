@@ -22,6 +22,43 @@ const nextConfig: NextConfig = {
   // Add performance optimizations
   reactStrictMode: true,
   poweredByHeader: false,
+  // Enhanced performance optimizations
+  experimental: {
+    optimizePackageImports: ['framer-motion', 'lucide-react', '@headlessui/react'],
+    scrollRestoration: true,
+  },
+  // Bundle analyzer and optimization
+  webpack: (config, { dev, isServer }) => {
+    // Only apply Webpack optimizations when Turbopack is not in use (production builds)
+    if (!dev && !isServer && process.env.NEXT_TURBO !== '1') {
+      // Bundle splitting for better caching
+      config.optimization.splitChunks = {
+        ...config.optimization.splitChunks,
+        cacheGroups: {
+          ...config.optimization.splitChunks?.cacheGroups,
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name: 'vendors',
+            chunks: 'all',
+            priority: 10,
+          },
+          animations: {
+            test: /[\\/]node_modules[\\/]framer-motion[\\/]/,
+            name: 'animations',
+            chunks: 'all',
+            priority: 20,
+          },
+          icons: {
+            test: /[\\/]node_modules[\\/]lucide-react[\\/]/,
+            name: 'icons',
+            chunks: 'all',
+            priority: 15,
+          },
+        },
+      };
+    }
+    return config;
+  },
   // Cache optimization
   onDemandEntries: {
     maxInactiveAge: 31536000,
