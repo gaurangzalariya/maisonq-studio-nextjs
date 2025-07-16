@@ -36,6 +36,7 @@ const services = [
 
 const navigation = [
   { name: 'Packages', href: '/packages' },
+  { name: 'Reviews', href: '/reviews' },
   { name: 'About', href: '/about' },
 ]
 
