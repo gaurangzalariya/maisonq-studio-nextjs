@@ -82,11 +82,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           href="https://use.typekit.net/mct8xox.css"
           as="style"
         />
-        <link
-          rel="stylesheet"
-          href="https://use.typekit.net/mct8xox.css"
-          media="print"
-        />
         <noscript>
           <link rel="stylesheet" href="https://use.typekit.net/mct8xox.css" />
         </noscript>
