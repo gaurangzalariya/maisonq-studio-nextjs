@@ -6,6 +6,12 @@ interface CalendlyEmbedProps {
   url: string;
 }
 
+// Define type for GTM events
+interface GTMEvent {
+  event: string;
+  [key: string]: unknown;
+}
+
 const CalendlyEmbed: React.FC<CalendlyEmbedProps> = ({
   url,
 }) => {
@@ -53,6 +59,6 @@ export default CalendlyEmbed;
 // Add TypeScript declaration for dataLayer
 declare global {
   interface Window {
-    dataLayer: any[];
+    dataLayer: GTMEvent[];
   }
 }
