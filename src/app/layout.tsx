@@ -82,9 +82,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           href="https://use.typekit.net/mct8xox.css"
           as="style"
         />
-        <noscript>
-          <link rel="stylesheet" href="https://use.typekit.net/mct8xox.css" />
-        </noscript>
       </head>
       <body className="font-primary text-gray-900 bg-[#f8f8f8] antialiased">
         <GoogleTagManagerNoScript gtmId="GTM-55GQ7JZL" />
