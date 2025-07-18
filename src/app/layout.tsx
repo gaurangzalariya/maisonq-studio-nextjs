@@ -53,15 +53,17 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const isDevelopment = process.env.NODE_ENV === 'development';
+
   return (
     <html lang="en" className={`${inter.variable} ${inter.className}`}>
       <head>
-        <GoogleTagManagerScript gtmId="GTM-55GQ7JZL" />
+        {!isDevelopment && <GoogleTagManagerScript gtmId="GTM-55GQ7JZL" />}
         {/* Preconnect to external domains */}
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://use.typekit.net" />
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        {!isDevelopment && <link rel="preconnect" href="https://www.googletagmanager.com" />}
         
         {/* Preload critical fonts */}
         <link
@@ -84,7 +86,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="font-primary text-gray-900 bg-[#f8f8f8] antialiased">
-        <GoogleTagManagerNoScript gtmId="GTM-55GQ7JZL" />
+        {!isDevelopment && <GoogleTagManagerNoScript gtmId="GTM-55GQ7JZL" />}
         <Container>
           <Header />
           <main>{children}</main>

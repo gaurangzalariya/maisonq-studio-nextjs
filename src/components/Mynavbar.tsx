@@ -35,6 +35,7 @@ const services = [
 ]
 
 const navigation = [
+  //{ name: 'Case Studies', href: '/case-studies' },
   { name: 'Packages', href: '/packages' },
   { name: 'Reviews', href: '/reviews' },
   { name: 'About', href: '/about' },
